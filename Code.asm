@@ -28,9 +28,9 @@ Right:
         call Index
         jmp Compare
 Found:     
-            PRINT_STRING "Элемент "
+            PRINT_STRING "РЃР»РµРјРµРЅС‚ "
             PRINT_DEC 2, al
-            PRINT_STRING " найден"
+            PRINT_STRING " РЅР°Р№РґРµРЅ"
             jmp Regularize
 Index:   
       mov bl, dl
@@ -52,14 +52,14 @@ Added:
             mov bp, [mass+ebx+1]
             mov [mass+ebx], cl
             mov [mass+ebx+1], bp
-            PRINT_STRING "Элемент "
+            PRINT_STRING "РЃР»РµРјРµРЅС‚ "
             PRINT_DEC 1, al
-            PRINT_STRING " не"
-            PRINT_STRING " найден. "
+            PRINT_STRING " РЅРµ"
+            PRINT_STRING " РЅР°Р№РґРµРЅ. "
             NEWLINE
-            PRINT_STRING "Элемент "
+            PRINT_STRING "РЃР»РµРјРµРЅС‚ "
             PRINT_DEC 1, al
-            PRINT_STRING " добавлен."
+            PRINT_STRING " РґРѕР±Р°РІР»РµРЅ."
                JMP Regularize
 Regularize:
   xor eax, eax
@@ -67,7 +67,7 @@ Regularize:
       mov edx, 0
       mov ebx, 1
       NEWLINE
-      PRINT_STRING "Полученный массив: "
+      PRINT_STRING "С•РѕР»СѓС‡РµРЅРЅС‹Р№ РјР°СЃСЃРёРІ: "
       call LeftBranch
       call Stamp
       call RightBranch
